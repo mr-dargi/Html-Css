@@ -3,27 +3,35 @@
 }
 
 #navBar {
-    background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(206, 206, 206);
+    background-color: rgb(52, 0, 73);
+    border: 2px solid rgb(235, 235, 235);
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
 #navBar ul {
     display: flex;
+    flex-direction: column; 
     flex-wrap: wrap;
-    text-align: start;
+    justify-content: space-between;
     align-items: center;
-    align-content: space-between;
     list-style: none;
 }
 
 .navBar-link {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
+
+.navBar-link span {
+    display: none;
+}
+
+.navBar-link span:hover {
+    display: inline;
+}
+
 .navBar-link:hover {
     color: rgb(29, 166, 245);
 }
@@ -51,6 +59,23 @@
     margin-top: 10px;
 }
 
+#red-box {
+    background-color: red;
+}
+
+
+#green-box {
+    background-color: green;
+}
+
+#yellow-box {
+    background-color: yellow;
+}
+
+#blue-box {
+    background-color: blue;
+}
+
 /* for mobile */
 
 .col-1 {width: 8.33%;}
@@ -70,6 +95,11 @@
 
 @media only screen and (min-width: 600px) {
     /* For desktop: */
+
+    .navBar-link span {
+        display: inline;
+    }
+
     #navBar ul {
         width: 100%;
         flex-direction: row-reverse;

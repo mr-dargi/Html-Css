@@ -6,12 +6,17 @@
     background-color: rgb(235, 235, 235);
     border: 2px solid rgb(206, 206, 206);
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 #navBar ul {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: start;
+    align-items: center;
+    align-content: space-between;
     list-style: none;
 }
 
@@ -22,6 +27,13 @@
 .navBar-link:hover {
     color: rgb(29, 166, 245);
 }
+
+#main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 
 #boxes {
     margin-top: 20px;
@@ -58,6 +70,12 @@
 
 @media only screen and (min-width: 600px) {
     /* For desktop: */
+    #navBar ul {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
     .col-t-1 {width: 8.33%;}
     .col-t-2 {width: 16.66%;}
     .col-t-3 {width: 25%;}
